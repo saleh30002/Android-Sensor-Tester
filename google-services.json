@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "896373424948",
+    "project_id": "thesis-project-beced",
+    "storage_bucket": "thesis-project-beced.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896373424948:android:7063121c3e33777df19b61",
+        "android_client_info": {
+          "package_name": "com.example.fingerprintjs_test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD32ujDkWFYdwzwOdzt90ZkxS_Y0xGZLfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

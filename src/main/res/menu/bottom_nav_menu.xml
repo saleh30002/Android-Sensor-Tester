@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_vibration"
+        android:icon="@drawable/baseline_vibration_24"
+        android:title="Vibration Test" />
+    <item
+        android:id="@+id/nav_infinity"
+        android:icon="@drawable/baseline_10k_24"
+        android:title="Infinity Test" />
+</menu>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="nav_info"/>
+    <item type="id" name="nav_vibration" />
+    <item type="id" name="nav_infinity" />
+</resources>
