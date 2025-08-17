@@ -95,9 +95,11 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     // Predefined lists
     private val situations = arrayOf(
+        "None",
         "Sitting, phone in hand",
         "Phone on a flat surface (ex: table)",
-        "Phone on an inclined/declined surface",
+        "Phone on an inclined surface",
+        "Phone on a declined surface",
         "Standing, phone in hand",
         "Walking, phone in hand",
         "Running, phone in hand",
@@ -107,7 +109,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     private val manufacturers = arrayOf(
         "Samsung",
-        "Apple",
         "Google",
         "OnePlus",
         "Xiaomi",
@@ -288,6 +289,9 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             setPadding(0, 8, 0, 8)
         }
 
+        val noneIndex = situations.indexOf("None")
+        situationSpinner1.setSelection(noneIndex)
+
        /* val manufacturerLabel1 = TextView(this).apply {
             text = "Phone manufacturer:"
             textSize = 16f
@@ -433,6 +437,8 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             )
             setPadding(0, 8, 0, 8)
         }
+
+        situationSpinner2.setSelection(noneIndex)
 
         /*val manufacturerLabel2 = TextView(this).apply {
             text = "Phone manufacturer:"
@@ -669,9 +675,19 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             if (savedName.isBlank() || savedId.isBlank()){
                 Toast
                     .makeText(this,
-                        "There is no name or ID data stored for this device. " +
                                 "Please enter your name and ID in the info page to proceed.",
                         Toast.LENGTH_LONG)
+                    .show()
+                return
+            }
+
+            if (situationSpinner1.selectedItem.toString() == "None") {
+                Toast
+                    .makeText(
+                        this,
+                        "Please pick your current situation to proceed with the test.",
+                        Toast.LENGTH_LONG
+                    )
                     .show()
                 return
             }
@@ -730,6 +746,17 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
                         "There is no name or ID data stored for this device. " +
                                 "Please enter your name and ID in the info page to proceed.",
                         Toast.LENGTH_LONG)
+                    .show()
+                return
+            }
+
+            if (situationSpinner2.selectedItem.toString() == "None") {
+                Toast
+                    .makeText(
+                        this,
+                        "Please pick your current situation to proceed with the test.",
+                        Toast.LENGTH_LONG
+                    )
                     .show()
                 return
             }
