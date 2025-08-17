@@ -933,7 +933,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             override fun onFinish(){
                 stopVibrationTest()
             }
-        }.start()
+        }.start() //test comment
     }
 
     override fun onSensorChanged(event: SensorEvent) {
