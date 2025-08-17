@@ -31,3 +31,6 @@ local.properties
 *.ipr
 *~
 *.swp
+
+
+google-services.json
